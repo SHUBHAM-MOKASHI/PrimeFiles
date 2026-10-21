@@ -366,7 +366,7 @@ export default function Dashboard() {
           <div className="flex items-center gap-3">
             <span>Encrypted Cloud Storage</span>
             <span>•</span>
-            <span>Single-User Vault</span>
+            <span>Private Cloud Vault</span>
           </div>
         </div>
       </footer>

@@ -86,6 +86,8 @@ export default function LoginPage() {
         if (res.needsConfirmation) {
           setSuccessMessage('Account created! Please check your email to confirm registration, then sign in.');
           setMode('login');
+        } else {
+          setSuccessMessage('Account created successfully! Entering your cloud vault...');
         }
       }
     }

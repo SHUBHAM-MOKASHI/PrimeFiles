@@ -85,7 +85,19 @@ USING (
 );
 ```
 4. Click **Run**.
-*(This creates the private `primefiles-storage` bucket and enforces complete Row Level Security so no user can access another user's files).*
+*(This creates the private `primefiles-storage` bucket and enforces complete Row Level Security so each user has their own private storage space isolated by user ID).*
+
+### Step 3: Instant Multi-User Signups & Avoiding Email Rate Limits (Recommended)
+By default, Supabase has "Confirm email" turned on, and limits built-in confirmation emails to only 3-4 per hour on the free tier. When creating a second account, you may see `Email rate limit exceeded` or delays.
+
+To allow multiple accounts to sign up instantly without rate limits:
+1. In your Supabase Dashboard, go to **Authentication** (left sidebar).
+2. Under **Configuration**, click **Providers**.
+3. Click **Email**.
+4. Toggle **OFF** the switch for **"Confirm email"**.
+5. Click **Save** at the bottom.
+
+Now any user can create an account and immediately log into their private vault!
 
 ---
 
